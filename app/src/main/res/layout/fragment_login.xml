@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvLetsLogin"
+            style="@style/h4"
+            android:layout_width="413dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="@dimen/tvRightAddressMargin"
+            android:gravity="center"
+            android:text="@string/rightAdress2"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/ellipse"
+            app:layout_constraintEnd_toEndOf="@id/ellipse"
+            app:layout_constraintStart_toStartOf="@id/ellipse"
+            app:layout_constraintTop_toTopOf="@id/guidelineLeftTexture" />
+
+        <TextView
+            android:id="@+id/tvDontHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@id/tvLetsLogin"
+            app:layout_constraintEnd_toEndOf="@id/tvLetsLogin"
+            app:layout_constraintTop_toBottomOf="@id/tvLetsLogin"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Нет учетной записи?\nРегистрируйся прямо сейчас!"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/edEmailLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/tvDontHaveAccount"
+            style="@style/editText"
+            android:hint="Почта"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="50dp"
+            />
+
+        <EditText
+            android:id="@+id/edPasswordLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/edEmailLogin"
+            style="@style/editText"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/buttonLoginLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:background="@drawable/blue_background"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edPasswordLogin"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:layout_marginTop="20dp"
+            android:text="Войти"
+            app:spinning_bar_color="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRegisterRegister"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:background="@color/g_black"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLoginLogin"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:layout_marginTop="20dp"
+            android:text="Регистрация"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

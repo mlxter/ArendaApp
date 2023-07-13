@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "215567895333",
+    "project_id": "arenda-1a4b7",
+    "storage_bucket": "arenda-1a4b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215567895333:android:cab60f15e192f98b98a8cc",
+        "android_client_info": {
+          "package_name": "com.example.arendainstrumenta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215567895333-m8socmjacl8fo5uj6i2lgmde27v5afdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arendainstrumenta",
+            "certificate_hash": "2609756e1b2944d77b8e8e7e4c65faa18882e939"
+          }
+        },
+        {
+          "client_id": "215567895333-km11ohghqlnh32dl4jcrgqpqnqhmgovf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADDjxwQ1rBKIINkazU9jeIzs5bE-VvOOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215567895333-km11ohghqlnh32dl4jcrgqpqnqhmgovf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

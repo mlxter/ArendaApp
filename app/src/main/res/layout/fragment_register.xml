@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvLetsRegister"
+            style="@style/h4"
+            android:layout_width="413dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="@dimen/tvRightAddressMargin"
+            android:gravity="center"
+            android:text="Регистрация"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/ellipse"
+            app:layout_constraintEnd_toEndOf="@id/ellipse"
+            app:layout_constraintStart_toStartOf="@id/ellipse"
+            app:layout_constraintTop_toTopOf="@id/guidelineLeftTexture" />
+
+        <TextView
+            android:id="@+id/tvZapolnite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@id/tvLetsRegister"
+            app:layout_constraintEnd_toEndOf="@id/tvLetsRegister"
+            app:layout_constraintTop_toBottomOf="@id/tvLetsRegister"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Заполните поля ниже"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/edNameReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/tvZapolnite"
+            style="@style/editText"
+            android:hint="Имя"
+            android:inputType="text"
+            android:layout_marginTop="50dp"
+            />
+
+        <EditText
+            android:id="@+id/edFamiliaReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/edNameReg"
+            style="@style/editText"
+            android:hint="Фамилия"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edEmailLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/edFamiliaReg"
+            style="@style/editText"
+            android:hint="Почта"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edPasswordLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/edEmailLogin"
+            style="@style/editText"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/buttonRegisterRegister"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edPasswordLogin"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:layout_marginTop="20dp"
+            android:text="Регистрация"
+            app:spinning_bar_color="@color/white"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
