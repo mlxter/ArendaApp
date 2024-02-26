@@ -11,6 +11,10 @@ android {
     namespace 'com.example.arendainstrumenta'
     compileSdk 33
 
+    lintOptions{
+        checkReleaseBuilds false
+    }
+
     defaultConfig {
         applicationId "com.example.arendainstrumenta"
         minSdk 21
@@ -19,6 +23,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {

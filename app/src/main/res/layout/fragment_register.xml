@@ -23,11 +23,7 @@
             android:gravity="center"
             android:text="Регистрация"
             android:textAlignment="center"
-            android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="@id/ellipse"
-            app:layout_constraintEnd_toEndOf="@id/ellipse"
-            app:layout_constraintStart_toStartOf="@id/ellipse"
-            app:layout_constraintTop_toTopOf="@id/guidelineLeftTexture" />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/tvZapolnite"

@@ -70,5 +70,5 @@ class ProductAdapter:
         return differ.currentList.size
     }
 
-    var onClick:((Product) -> Unit)? = null
+    var onClick: ((Product) -> Unit)? = null
 }

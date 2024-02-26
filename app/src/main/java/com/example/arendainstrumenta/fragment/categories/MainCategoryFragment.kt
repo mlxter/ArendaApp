@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Adapter
@@ -29,7 +31,8 @@ private val TAG = "MainCategoryFragment"
 @AndroidEntryPoint
 class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
     private lateinit var binding: FragmentMainCategoryBinding
-    private lateinit var ProductAdapter: ProductAdapter
+    private lateinit var productAdapter: ProductAdapter
+
 
     private val viewModel by viewModels<MainCategoryViewModel>()
 
@@ -47,10 +50,20 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
 
         setupProductRv()
 
-        ProductAdapter.onClick = {
+        productAdapter.onClick = {
             val b = Bundle().apply { putParcelable("product",it) }
             findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)
         }
+
+//        ProductAdapter.onClick = { product ->
+//            val b = Bundle().apply { putParcelable("product", product) }
+//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b,
+//                NavOptions.Builder()
+//                    .setLaunchSingleTop(true)
+//                    .setPopUpTo(R.id.homeFragment, false)
+//                    .build()
+//            )
+//        }
 
         lifecycleScope.launchWhenStarted {
             viewModel.Products.collectLatest {
@@ -59,7 +72,7 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                         showLoading()
                     }
                     is Resource.Success ->{
-                        ProductAdapter.differ.submitList(it.data)
+                        productAdapter.differ.submitList(it.data)
                         hideLoading()
                     }
                     is Resource.Error ->{
@@ -83,10 +96,10 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
     }
 
     private fun setupProductRv() {
-        ProductAdapter = ProductAdapter()
+        productAdapter = ProductAdapter()
         binding.rvProducts.apply {
             layoutManager = GridLayoutManager(requireContext(),2,GridLayoutManager.VERTICAL, false)
-            adapter = ProductAdapter
+            adapter = productAdapter
         }
     }
 

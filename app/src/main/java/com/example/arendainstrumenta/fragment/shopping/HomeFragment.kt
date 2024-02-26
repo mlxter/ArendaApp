@@ -6,14 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TableLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.arendainstrumenta.R
 import com.example.arendainstrumenta.adapters.HomeViewPagerAdapter
+import com.example.arendainstrumenta.adapters.ProductAdapter
 import com.example.arendainstrumenta.databinding.FragmentHomeBinding
 import com.example.arendainstrumenta.fragment.categories.MainCategoryFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

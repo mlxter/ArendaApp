@@ -3,6 +3,7 @@ package com.example.arendainstrumenta.di
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
 import com.example.arendainstrumenta.firebase.FirebaseCommon
+import com.example.arendainstrumenta.util.Constants.INTRODUCTION_SP
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -28,6 +29,11 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseFirestoreDatabase() = Firebase.firestore
+
+    @Provides
+    fun provideIntroductionSP(
+        application: Application
+    ) = application.getSharedPreferences(INTRODUCTION_SP, MODE_PRIVATE)
 
     @Provides
     @Singleton
