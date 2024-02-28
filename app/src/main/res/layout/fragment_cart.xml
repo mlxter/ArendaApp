@@ -165,16 +165,6 @@
 
 
             <ImageView
-                android:id="@+id/imageEmptyBoxTexture"
-                android:layout_width="200dp"
-                android:layout_height="250dp"
-                android:src="@drawable/ic_empty_box_texture"
-                app:layout_constraintBottom_toBottomOf="@id/imageEmptyBox"
-                app:layout_constraintTop_toTopOf="@id/imageEmptyBox"
-                app:layout_constraintStart_toStartOf="@id/imageEmptyBox"
-                app:layout_constraintEnd_toEndOf="@id/imageEmptyBox"/>
-
-            <ImageView
                 android:id="@+id/imageEmptyBox"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -194,9 +184,9 @@
                 android:text="Ваша корзина пуста"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                app:layout_constraintTop_toBottomOf="@id/imageEmptyBoxTexture"
-                app:layout_constraintStart_toStartOf="@id/imageEmptyBoxTexture"
-                app:layout_constraintEnd_toEndOf="@id/imageEmptyBoxTexture"/>
+                app:layout_constraintTop_toBottomOf="@id/imageEmptyBox"
+                app:layout_constraintStart_toStartOf="@id/imageEmptyBox"
+                app:layout_constraintEnd_toEndOf="@id/imageEmptyBox"/>
 
 
 

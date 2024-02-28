@@ -10,14 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <ImageView
             android:id="@+id/captureImageView"
             android:layout_width="300dp"
             android:layout_height="300dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.208" />
+
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/captureImageView"
+            android:layout_marginTop="20dp"
+            android:text="Результат: "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/captureImageView"
+            tools:layout_editor_absoluteX="164dp" />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/captureImgBtn"
@@ -29,7 +46,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/captureImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/captureImageView"
+            app:layout_constraintVertical_bias="0.218" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/selectImgBtn"
+            android:layout_width="265dp"
+            android:layout_height="57dp"
+            android:background="@drawable/blue_background"
+            android:text="Выбрать фото"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/captureImageView"
+            app:layout_constraintVertical_bias="0.503" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

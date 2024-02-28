@@ -3,28 +3,6 @@
   <component name="deploymentTargetDropDown">
     <value>
       <entry key="app">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Максим\.android\avd\Pixel_2_API_27.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-02-26T09:15:01.868977900Z" />
-        </State>
-      </entry>
-      <entry key="arenda">
-        <State />
-      </entry>
-      <entry key="arendaAPP">
-        <State />
-      </entry>
-      <entry key="gg">
         <State />
       </entry>
     </value>
