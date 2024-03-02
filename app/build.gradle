@@ -100,6 +100,8 @@ dependencies {
 
     implementation 'org.tensorflow:tensorflow-lite:2.7.0' // Используйте последнюю версию
     implementation 'org.tensorflow:tensorflow-lite-support:0.3.0' // Используйте последнюю версию
+    implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:2.9.0'
+
 
 
 
