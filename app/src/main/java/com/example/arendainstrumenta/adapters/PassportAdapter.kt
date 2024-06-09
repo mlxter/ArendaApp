@@ -18,7 +18,7 @@ class PassportAdapter : RecyclerView.Adapter<PassportAdapter.PassportViewHolder>
             binding.apply {
                 buttonPassport.text = passport.passportFIO
                 if (isSelected) {
-                    buttonPassport.background = ColorDrawable(itemView.context.resources.getColor(R.color.g_blue))
+                    buttonPassport.background = ColorDrawable(itemView.context.resources.getColor(R.color.yellow))
                 } else {
                     buttonPassport.background = ColorDrawable(itemView.context.resources.getColor(R.color.g_white))
                 }
